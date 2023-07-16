@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmlwbb3eeto6r"]
+
+[ext_resource type="Script" path="res://Scene/BattleScene/main_monster.gd" id="1_nrihk"]
+[ext_resource type="PackedScene" uid="uid://c2ujshvbkujtd" path="res://Assets/Lab/model.obj" id="1_wwe2x"]
+[ext_resource type="AudioStream" uid="uid://fs74d50u10x3" path="res://Assets/Music/Thunder Sound effect [TubeRipper.com].ogg" id="3_3r6dl"]
+[ext_resource type="AudioStream" uid="uid://dipdyvs7sakj3" path="res://Assets/Music/Punch sound effect [TubeRipper.com].ogg" id="4_wtil4"]
+[ext_resource type="AudioStream" uid="uid://cmmu1g2jtsnxk" path="res://Assets/Music/Pokémon - Pikachu (Cry) [TubeRipper.com].ogg" id="5_wtxgf"]
+[ext_resource type="PackedScene" uid="uid://da6vlra2675du" path="res://Scene/BattleScene/monster_hand.tscn" id="6_v81wk"]
+[ext_resource type="Script" path="res://Scene/BattleScene/PlayerArea3D.gd" id="7_waw2k"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sthl5"]
+radius = 0.871683
+height = 2.22585
+
+[node name="MainMonster" type="CharacterBody3D"]
+script = ExtResource("1_nrihk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736837, 0.202194)
+visible = false
+shape = SubResource("CapsuleShape3D_sthl5")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="model" parent="Node3D" instance=ExtResource("1_wwe2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="camera_mount" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93772, 0)
+
+[node name="Camera3D" type="Camera3D" parent="camera_mount"]
+transform = Transform3D(1, 0, 0, 0, 0.930059, 0.36741, 0, -0.36741, 0.930059, 0, 0.908967, 2.57266)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="camera_mount/Camera3D"]
+
+[node name="ThunderCry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3r6dl")
+max_polyphony = 55
+
+[node name="AttackCry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wtil4")
+max_polyphony = 55
+
+[node name="CryCry" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wtxgf")
+max_polyphony = 55
+
+[node name="PikachuHand" parent="." instance=ExtResource("6_v81wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515671, 0)
+
+[node name="Area3D" type="Area3D" parent="." groups=["player"]]
+script = ExtResource("7_waw2k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736837, 0.202194)
+shape = SubResource("CapsuleShape3D_sthl5")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="HealthLevel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44429, 0)
+text = "Health"
+
+[connection signal="player_body_part_hit" from="Area3D" to="." method="_on_area_3d_player_body_part_hit"]

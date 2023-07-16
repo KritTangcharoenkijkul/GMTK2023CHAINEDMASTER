@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://btipecyg0meaw"]
+
+[ext_resource type="Script" path="res://Scene/BattleScene/Main_monsterbullet.gd" id="1_jrcpl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xj5ic"]
+size = Vector3(0.05, 0.05, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cle35"]
+albedo_color = Color(1, 0.917647, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1ei4"]
+albedo_color = Color(1, 0.917647, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hwhx"]
+albedo_color = Color(1, 0.917647, 0, 1)
+emission_enabled = true
+emission = Color(0, 0.94902, 0.12549, 1)
+emission_energy_multiplier = 5.0
+
+[node name="Bullet" type="Node3D"]
+script = ExtResource("1_jrcpl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.717725, -0.696326, 0, 0.696326, 0.717725, -0.0490046, 0.253253, -0.527731)
+mesh = SubResource("BoxMesh_xj5ic")
+surface_material_override/0 = SubResource("StandardMaterial3D_cle35")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.811686, -0.584094, 0, 0.584094, 0.811686, -0.0728607, 0.266286, 0.135294)
+mesh = SubResource("BoxMesh_xj5ic")
+surface_material_override/0 = SubResource("StandardMaterial3D_r1ei4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.703196, 0.710996, 0, -0.710996, 0.703196, -0.0737363, 0.250675, -0.209213)
+material_override = SubResource("StandardMaterial3D_4hwhx")
+mesh = SubResource("BoxMesh_xj5ic")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.48387, -0.0488313, 0.277773, 0.222043)
+target_position = Vector3(0, 0, -1)
+collide_with_areas = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg6s7llhftglw"]
+
+[ext_resource type="PackedScene" uid="uid://c2ujshvbkujtd" path="res://Assets/Lab/model.obj" id="1_2yunk"]
+[ext_resource type="Script" path="res://Scene/BattleScene/rival.gd" id="1_sc81s"]
+[ext_resource type="Script" path="res://Scene/BattleScene/Area3D.gd" id="3_tfbed"]
+[ext_resource type="PackedScene" uid="uid://c214r3xt5ymfy" path="res://Scene/BattleScene/rival_hand.tscn" id="4_wbrnu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ca0o3"]
+radius = 0.661608
+height = 1.81359
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_57tw0"]
+radius = 1.0
+
+[node name="Rival" type="CharacterBody3D"]
+script = ExtResource("1_sc81s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.983655, 0.219754)
+visible = false
+shape = SubResource("CapsuleShape3D_ca0o3")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="model" parent="Node3D" instance=ExtResource("1_2yunk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754621, 0)
+
+[node name="Area3D" type="Area3D" parent="." groups=["enemy"]]
+script = ExtResource("3_tfbed")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.00282, 0, 0, 0, 1.00282, 0, 0, 0, 1.00282, 0, 0.755503, 0.132291)
+shape = SubResource("CapsuleShape3D_57tw0")
+
+[node name="HealthLevel" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.46998, 0)
+text = "Health"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = 0.15
+
+[node name="RivalHand" parent="." instance=ExtResource("4_wbrnu")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_part_hit" from="Area3D" to="." method="_on_area_3d_body_part_hit"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

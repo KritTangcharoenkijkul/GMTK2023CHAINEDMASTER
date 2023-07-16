@@ -1,0 +1,157 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg2yp7iyhv1fp"]
+
+[ext_resource type="PackedScene" uid="uid://buuhskfexi3lj" path="res://Assets/Lab/Bookshelfs.tscn" id="1_5ucqq"]
+[ext_resource type="Texture2D" uid="uid://d24uxfesb4o0u" path="res://Assets/Lab/2145.jpg" id="2_cnv2j"]
+[ext_resource type="Texture2D" uid="uid://dofl041v5gq72" path="res://Assets/Lab/brick-wall-painted-white.jpg" id="3_jlgyb"]
+[ext_resource type="PackedScene" uid="uid://cv6frq66oquq7" path="res://Assets/Lab/Small Table.glb" id="4_4tocj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay32m"]
+albedo_color = Color(0.768627, 0.643137, 0.517647, 1)
+albedo_texture = ExtResource("2_cnv2j")
+uv1_scale = Vector3(9, 9, 9)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucums"]
+albedo_color = Color(0.588235, 0.294118, 0, 1)
+albedo_texture = ExtResource("3_jlgyb")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Shelf" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40563, 0.827424, 2.48023)
+
+[node name="Shelf2" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876836, 0.827424, 2.48023)
+
+[node name="Shelf3" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.622391, 0.827424, 2.48023)
+
+[node name="Shelf4" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.564781, 0.827424, 2.79386)
+
+[node name="Shelf5" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.96401, 0.827424, 2.79386)
+
+[node name="Shelf6" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.46324, 0.827424, 2.79386)
+
+[node name="Shelf13" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65746, 0.827424, 2.48023)
+
+[node name="Shelf14" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18625, 0.827424, 2.48023)
+
+[node name="Shelf15" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68548, 0.827424, 2.48023)
+
+[node name="Shelf16" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.62787, 0.827424, 2.79386)
+
+[node name="Shelf17" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.09908, 0.827424, 2.79386)
+
+[node name="Shelf18" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.59985, 0.827424, 2.79386)
+
+[node name="Shelf19" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.327993, 0, -0.94468, 0, 1, 0, 0.94468, 0, 0.327993, -6.83999, 0.827424, 0.407525)
+
+[node name="Shelf20" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.327993, 0, -0.94468, 0, 1, 0, 0.94468, 0, 0.327993, -7.34142, 0.827424, -1.0367)
+
+[node name="Shelf21" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.327993, 0, -0.94468, 0, 1, 0, 0.94468, 0, 0.327993, -7.83316, 0.827424, -2.45299)
+
+[node name="Shelf22" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.327993, 0, 0.94468, 0, 1, 0, -0.94468, 0, -0.327993, -8.11055, 0.827424, -2.29569)
+
+[node name="Shelf23" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.327993, 0, 0.94468, 0, 1, 0, -0.94468, 0, -0.327993, -7.60911, 0.827424, -0.851474)
+
+[node name="Shelf24" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.327993, 0, 0.94468, 0, 1, 0, -0.94468, 0, -0.327993, -7.11738, 0.827424, 0.564818)
+
+[node name="Shelf7" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4166, 0.827424, 2.42881)
+
+[node name="Shelf8" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88781, 0.827424, 2.42881)
+
+[node name="Shelf9" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.38858, 0.827424, 2.42881)
+
+[node name="Shelf10" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.44619, 0.827424, 2.74245)
+
+[node name="Shelf11" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.97498, 0.827424, 2.74245)
+
+[node name="Shelf12" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.47421, 0.827424, 2.74245)
+
+[node name="Shelf25" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.0288638, 0, 0.999583, 0, 1, 0, -0.999583, 0, 0.0288638, 7.71006, 0.827424, -2.73628)
+
+[node name="Shelf26" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.0288638, 0, 0.999583, 0, 1, 0, -0.999583, 0, 0.0288638, 7.66593, 0.827424, -1.20812)
+
+[node name="Shelf27" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(0.0288638, 0, 0.999583, 0, 1, 0, -0.999583, 0, 0.0288638, 7.62266, 0.827424, 0.29048)
+
+[node name="Shelf28" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.0288637, 0, -0.999583, 0, 1, 0, 0.999583, 0, -0.0288637, 7.93783, 0.827424, 0.241947)
+
+[node name="Shelf29" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.0288637, 0, -0.999583, 0, 1, 0, 0.999583, 0, -0.0288637, 7.98195, 0.827424, -1.28621)
+
+[node name="Shelf30" parent="." instance=ExtResource("1_5ucqq")]
+transform = Transform3D(-0.0288637, 0, -0.999583, 0, 1, 0, 0.999583, 0, -0.0288637, 8.02523, 0.827424, -2.78481)
+
+[node name="Floor" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ay32m")
+use_collision = true
+size = Vector3(80, 1, 80)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+
+[node name="Trump1" type="CSGBox3D" parent="."]
+transform = Transform3D(20.2595, 0, 0, 0, 3.94931, 0, 0, 0, 0.336368, 0, 1.92891, 4.44997)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Trump2" type="CSGBox3D" parent="."]
+transform = Transform3D(20.2595, 0, 0, 0, 3.94931, 0, 0, 0, 0.336368, 0, 1.92891, -12.139)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Truump3" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.85572e-07, 0, 0.336368, 0, 3.94931, 0, -20.2595, 0, -1.47031e-08, -9.90241, 1.92891, -4.3534)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Trump4" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.85572e-07, 0, 0.336368, 0, 3.94931, 0, -20.2595, 0, -1.47031e-08, 9.15701, 1.92891, -4.3534)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Small Table" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -0.414338, 0.510473, -8.46812)
+
+[node name="Small Table2" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -3.62806, 0.510473, -8.46812)
+
+[node name="Small Table3" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -3.62806, 0.510473, -5.14578)
+
+[node name="Small Table4" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, 2.63881, 0.510473, -5.14578)
+
+[node name="Small Table5" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, 2.63881, 0.510473, -10.3284)
+
+[node name="Small Table6" parent="." instance=ExtResource("4_4tocj")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -6.32301, 0.510473, -10.3284)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.738891, 0.673825, 0, -0.673825, -0.738891, 0, 15.2841, -13.1436)

@@ -1,0 +1,164 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqskchipq8fm6"]
+
+[ext_resource type="PackedScene" uid="uid://dmlwbb3eeto6r" path="res://Scene/BattleScene/main_monster.tscn" id="1_enpuc"]
+[ext_resource type="PackedScene" uid="uid://buuhskfexi3lj" path="res://Assets/Lab/Bookshelfs.tscn" id="2_gxto5"]
+[ext_resource type="Texture2D" uid="uid://d24uxfesb4o0u" path="res://Assets/Lab/2145.jpg" id="3_tw76n"]
+[ext_resource type="Texture2D" uid="uid://dofl041v5gq72" path="res://Assets/Lab/brick-wall-painted-white.jpg" id="4_nh4vc"]
+[ext_resource type="PackedScene" uid="uid://cv6frq66oquq7" path="res://Assets/Lab/Small Table.glb" id="5_avnt3"]
+[ext_resource type="AudioStream" uid="uid://cbx6nm00ayvi4" path="res://Assets/Music/Pokémon Red Blue Yellow - Trainer Battle Music (HQ) [TubeRipper.com].ogg" id="6_7712g"]
+[ext_resource type="PackedScene" uid="uid://dg6s7llhftglw" path="res://Scene/BattleScene/rival.tscn" id="7_g6c4j"]
+[ext_resource type="PackedScene" uid="uid://b1hkudsiudl12" path="res://Scene/BattleScene/trainer.tscn" id="8_cae6k"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_xqhck"]
+vertices = PackedVector3Array(-29.75, 1, -39.5, -39.5, 1, -39.5, -39.5, 1, -31.75, -29.75, 1, -39.5, -39.5, 1, -31.75, -39.5, 1, -24, -20, 1, -39.5, -29.75, 1, -39.5, -39.5, 1, -24, -39.5, 1, -16.25, -1.75, 1, -9.75, -0.25, 1, -9.75, -0.25, 1, -39.5, -10.25, 1, -39.5, -2, 1, -8.5, -1.75, 1, -9.75, -10.25, 1, -39.5, -20, 1, -39.5, -39.5, 1, -16.25, -39.5, 1, -8.5, 39.5, 1, -32.25, 39.5, 1, -39.5, 29.5, 1, -39.5, 39.5, 1, -24.75, 39.5, 1, -32.25, 29.5, 1, -39.5, 39.5, 1, -17.5, 39.5, 1, -24.75, 29.5, 1, -39.5, 19.5, 1, -39.5, 19.5, 1, -39.5, 9.5, 1, -39.5, 0.75, 1, -9.75, 39.5, 1, -10, 39.5, 1, -17.5, -0.25, 1, -39.5, -0.25, 1, -9.75, 0.75, 1, -9.75, 9.5, 1, -39.5, 1.25, 1, -7.5, -0.25, 1, -7.25, 0, 1, -0.5, 3.5, 1, -0.5, 0.75, 1, -9.75, 1.25, 1, -9.5, 39.5, 1, -10, 1.25, 1, -9.5, 1.25, 1, -7.5, 3.5, 1, -0.5, 39.5, 1, 0.5, 39.5, 1, -10, 3.5, 1, -0.5, 3.75, 1, 0.5, 39.5, 1, 0.5, -1, 1.75, -8.75, -1, 1.75, -8.25, 0.25, 1.75, -8.25, 0.25, 1.75, -8.75, -1.75, 1, -0.5, 0, 1, -0.5, -0.25, 1, -7.25, -1.75, 1, -7.25, -2, 1, 0.5, -1.75, 1, -0.5, -1.75, 1, -7.25, -2, 1, -8.5, -39.5, 1, -8.5, -39.5, 1, 0.5, -39.5, 1, 29.75, -39.5, 1, 39.5, -29.75, 1, 39.5, -39.5, 1, 20, -39.5, 1, 29.75, -29.75, 1, 39.5, -39.5, 1, 20, -29.75, 1, 39.5, -20, 1, 39.5, -39.5, 1, 10.25, -0.5, 1, 39.5, -0.25, 1, 1.25, -1.75, 1, 1.25, -10.25, 1, 39.5, -1.75, 1, 1.25, -2, 1, 0.5, -39.5, 1, 0.5, -39.5, 1, 10.25, -20, 1, 39.5, -10.25, 1, 39.5, 30, 1, 39.5, 39.5, 1, 39.5, 39.5, 1, 29.75, 20.75, 1, 39.5, 30, 1, 39.5, 39.5, 1, 29.75, 20.75, 1, 39.5, 39.5, 1, 29.75, 39.5, 1, 20, 11.5, 1, 39.5, 3.5, 1, 1.25, 2, 1, 1.25, 2.25, 1, 39.5, 11.5, 1, 39.5, 39.5, 1, 20, 39.5, 1, 10.25, 39.5, 1, 0.5, 3.75, 1, 0.5, 3.5, 1, 1.25, 39.5, 1, 10.25, -0.5, 1, 39.5, 2.25, 1, 39.5, 2, 1, 1.25, -0.25, 1, 1.25)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 6), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(17, 14, 18), PackedInt32Array(18, 14, 19), PackedInt32Array(22, 21, 20), PackedInt32Array(25, 24, 23), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 29), PackedInt32Array(34, 33, 30), PackedInt32Array(30, 33, 31), PackedInt32Array(31, 33, 32), PackedInt32Array(36, 35, 37), PackedInt32Array(37, 35, 38), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(45, 44, 43), PackedInt32Array(47, 46, 48), PackedInt32Array(48, 46, 50), PackedInt32Array(48, 50, 49), PackedInt32Array(53, 52, 51), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(61, 60, 58), PackedInt32Array(58, 60, 59), PackedInt32Array(63, 62, 64), PackedInt32Array(64, 62, 65), PackedInt32Array(65, 62, 67), PackedInt32Array(65, 67, 66), PackedInt32Array(70, 69, 68), PackedInt32Array(73, 72, 71), PackedInt32Array(75, 74, 76), PackedInt32Array(76, 74, 77), PackedInt32Array(79, 78, 80), PackedInt32Array(80, 78, 81), PackedInt32Array(83, 82, 84), PackedInt32Array(84, 82, 85), PackedInt32Array(85, 82, 86), PackedInt32Array(86, 82, 87), PackedInt32Array(90, 89, 88), PackedInt32Array(93, 92, 91), PackedInt32Array(95, 94, 96), PackedInt32Array(96, 94, 97), PackedInt32Array(98, 103, 99), PackedInt32Array(99, 103, 102), PackedInt32Array(99, 102, 101), PackedInt32Array(99, 101, 100), PackedInt32Array(105, 104, 106), PackedInt32Array(106, 104, 107), PackedInt32Array(111, 110, 108), PackedInt32Array(108, 110, 109)]
+agent_max_slope = 60.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay32m"]
+albedo_color = Color(0.768627, 0.643137, 0.517647, 1)
+albedo_texture = ExtResource("3_tw76n")
+uv1_scale = Vector3(9, 9, 9)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucums"]
+albedo_color = Color(0.588235, 0.294118, 0, 1)
+albedo_texture = ExtResource("4_nh4vc")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MainMonster" parent="." instance=ExtResource("1_enpuc")]
+transform = Transform3D(0.0871558, 0, 0.996195, 0, 1, 0, -0.996195, 0, 0.0871558, 3.54783, 1.48161, -3.77028)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_xqhck")
+
+[node name="Shelf" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40563, 0.827424, 2.15405)
+skeleton = NodePath("../..")
+
+[node name="Shelf2" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876836, 0.827424, 2.15405)
+skeleton = NodePath("../..")
+
+[node name="Shelf3" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.622391, 0.827424, 2.15405)
+skeleton = NodePath("../..")
+
+[node name="Shelf4" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.564781, 0.827424, 2.46768)
+skeleton = NodePath("../..")
+
+[node name="Shelf5" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.96401, 0.827424, 2.46768)
+skeleton = NodePath("../..")
+
+[node name="Shelf6" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.46324, 0.827424, 2.46768)
+skeleton = NodePath("../..")
+
+[node name="Shelf13" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.937568, 0, 0.347803, 0, 1, 0, -0.347803, 0, 0.937568, 7.29425, 0.827424, 1.64728)
+skeleton = NodePath("../..")
+
+[node name="Shelf14" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.937568, 0, 0.347803, 0, 1, 0, -0.347803, 0, 0.937568, 5.8609, 0.827424, 2.179)
+skeleton = NodePath("../..")
+
+[node name="Shelf15" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.937568, 0, 0.347803, 0, 1, 0, -0.347803, 0, 0.937568, 4.45527, 0.827424, 2.70043)
+skeleton = NodePath("../..")
+
+[node name="Shelf16" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.937568, 0, -0.347803, 0, 1, 0, 0.347803, 0, -0.937568, 4.61837, 0.827424, 2.97445)
+skeleton = NodePath("../..")
+
+[node name="Shelf17" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.937568, 0, -0.347803, 0, 1, 0, 0.347803, 0, -0.937568, 6.05171, 0.827424, 2.44273)
+skeleton = NodePath("../..")
+
+[node name="Shelf18" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.937568, 0, -0.347803, 0, 1, 0, 0.347803, 0, -0.937568, 7.45734, 0.827424, 1.9213)
+skeleton = NodePath("../..")
+
+[node name="Shelf7" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.994325, 0, -0.106386, 0, 1, 0, 0.106386, 0, 0.994325, -3.6298, 0.827424, 1.23647)
+skeleton = NodePath("../..")
+
+[node name="Shelf8" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.994325, 0, -0.106386, 0, 1, 0, 0.106386, 0, 0.994325, -5.14992, 0.827424, 1.07383)
+skeleton = NodePath("../..")
+
+[node name="Shelf9" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(0.994325, 0, -0.106386, 0, 1, 0, 0.106386, 0, 0.994325, -6.64063, 0.827424, 0.914333)
+skeleton = NodePath("../..")
+
+[node name="Shelf10" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.994325, 0, 0.106385, 0, 1, 0, -0.106385, 0, -0.994325, -6.61672, 0.827424, 1.23232)
+skeleton = NodePath("../..")
+
+[node name="Shelf11" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.994325, 0, 0.106385, 0, 1, 0, -0.106385, 0, -0.994325, -5.0966, 0.827424, 1.39496)
+skeleton = NodePath("../..")
+
+[node name="Shelf12" parent="NavigationRegion3D" instance=ExtResource("2_gxto5")]
+transform = Transform3D(-0.994325, 0, 0.106385, 0, 1, 0, -0.106385, 0, -0.994325, -3.60588, 0.827424, 1.55446)
+skeleton = NodePath("../..")
+
+[node name="Floor" type="CSGBox3D" parent="NavigationRegion3D"]
+material_override = SubResource("StandardMaterial3D_ay32m")
+use_collision = true
+size = Vector3(80, 1, 80)
+
+[node name="Small Table" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -0.414338, 0.510473, -8.46812)
+
+[node name="Small Table3" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -4.30514, 0.510473, -8.46812)
+
+[node name="Small Table5" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -0.486151, 0.510473, -1.1457)
+
+[node name="Small Table4" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.0313236, 0, -0.999509, 0, 1, 0, 0.999509, 0, -0.0313236, -4.30514, 0.510473, -2.12873)
+
+[node name="Small Table2" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.181721, 0, -0.98335, 0, 1, 0, 0.98335, 0, -0.181721, 2.27343, 0.510473, -8.46812)
+
+[node name="Small Table6" parent="NavigationRegion3D" instance=ExtResource("5_avnt3")]
+transform = Transform3D(-0.181721, 0, -0.98335, 0, 1, 0, 0.98335, 0, -0.181721, 2.27343, 0.510473, -1.24557)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3, 4)
+
+[node name="Trump1" type="CSGBox3D" parent="."]
+transform = Transform3D(20.2595, 0, 0, 0, 3.94931, 0, 0, 0, 0.336368, 0, 1.92891, 4.44997)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Trump2" type="CSGBox3D" parent="."]
+transform = Transform3D(20.2595, 0, 0, 0, 3.94931, 0, 0, 0, 0.336368, 0, 1.92891, -12.139)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Truump3" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.85572e-07, 0, 0.336368, 0, 3.94931, 0, -20.2595, 0, -1.47031e-08, -9.90241, 1.92891, -4.3534)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="Trump4" type="CSGBox3D" parent="."]
+transform = Transform3D(-8.85572e-07, 0, 0.336368, 0, 3.94931, 0, -20.2595, 0, -1.47031e-08, 9.15701, 1.92891, -4.3534)
+material_override = SubResource("StandardMaterial3D_ucums")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7712g")
+volume_db = -20.0
+autoplay = true
+
+[node name="Rival" parent="." instance=ExtResource("7_g6c4j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.03608, 0.750656, -4.66953)
+player_path = NodePath("../MainMonster")
+
+[node name="Rival2" parent="." instance=ExtResource("8_cae6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.81209, 0.849633, -1.77159)
+
+[node name="Rival3" parent="." instance=ExtResource("8_cae6k")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -7.48033, 0.849633, -4.93445)

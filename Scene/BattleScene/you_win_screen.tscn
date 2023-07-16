@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbqc8nnnh764g"]
+
+[ext_resource type="FontFile" uid="uid://cbf5i8cve1wum" path="res://Assets/Font/Pokemon Solid.ttf" id="1_5flhf"]
+[ext_resource type="Script" path="res://Scene/BattleScene/you_win_screen.gd" id="1_hpk3u"]
+[ext_resource type="FontFile" uid="uid://cbmkyecvopxg5" path="res://Assets/Font/Pokemon Hollow.ttf" id="2_trnso"]
+[ext_resource type="AudioStream" uid="uid://ch5v8ydy0p27a" path="res://Assets/Music/winsound.ogg" id="4_0e1y0"]
+
+[node name="YouWinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hpk3u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27451, 0.796078, 0.380392, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1278.0
+offset_bottom = 717.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_5flhf")
+theme_override_font_sizes/font_size = 100
+text = "Player defeated Rival!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/Label"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 496.0
+offset_right = 898.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("2_trnso")
+theme_override_font_sizes/font_size = 50
+text = "Back to Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0e1y0")
+autoplay = true
+
+[connection signal="pressed" from="ColorRect/Label/Button" to="." method="_on_button_pressed"]
